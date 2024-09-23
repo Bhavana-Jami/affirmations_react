@@ -1,0 +1,131 @@
+.navbar {
+    display: flex;
+    width: 100%;
+    /* background-color: #104f5a; */
+    
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+}
+
+.navbar_title {
+    font-size: 1.9rem;
+    font-weight: bold;
+    margin-left: 4rem;
+    background: linear-gradient(to right,
+            #7953cd 20%,
+            #104f5a 30%,
+            #0190cd 70%,
+            #764ada 80%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 2s ease-in-out infinite alternate;
+}
+
+.navbar_links {
+    display: flex;
+    gap: 1.2rem;
+    margin-right: 4rem;
+}
+
+li {
+    list-style-type: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 2px;
+}
+
+li:active {
+    background-color: #104f5a;
+
+}
+
+a {
+    text-decoration: none;
+    font-size: larger;
+    color: white !important;
+    cursor: pointer;
+}
+
+li:hover {
+    background-color: #104f5a;
+
+}
+
+.hamburger_icon {
+    display: none;
+    padding: 0.5rem 0.8rem;
+
+}
+
+/* Hide links on mobile when not active */
+.responsive_navbar_links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    margin-left: 1rem;
+    padding-inline-start: 0px !important;
+
+}
+
+.responsive_navbar {
+    width: 100%;
+    display: flex;
+    background-color: #104f5a;
+    justify-content: start;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    transition: all 100ms ease-in-out;
+}
+
+/* Hide navigation by default on small screens */
+@media only screen and (max-width: 768px) {
+    .navbar_links {
+        display: none;
+
+    }
+
+    li {
+        margin-left: 3rem !important;
+        padding-left: 0 !important;
+        text-align: left !important;
+    }
+
+    .hamburger_icon {
+        display: block;
+        position: absolute;
+        right: 10%;
+        font-size: larger;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+
+
+    }
+
+    .responsive_navbar_links {
+        display: flex;
+    }
+}
+
+@keyframes textShine {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}

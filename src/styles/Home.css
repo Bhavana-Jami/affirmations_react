@@ -1,0 +1,78 @@
+.home_overlay {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background: #000101;
+  opacity: 0.79;
+  background-size: contain;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+
+.home_overlay p {
+  font-size: 2rem;
+  font-weight: bold;
+  z-index: 101;
+  margin: 0 auto; /* Centers the text horizontally */
+  /* margin-bottom: 1.5rem; */
+  max-width: 700px; /* Adjust this value to control the line breaks */
+  padding: 0 2rem; /* Optional: Adds space on the sides */
+  text-align: center; /* Optional: Centers the text */
+  height: 140px;
+  text-wrap:wrap;
+  /* word-break: break-all; */
+  word-wrap: break-word;
+}
+
+
+
+.home_overlay button {
+  all: unset;
+  /* margin-top: 0.5rem; */
+  cursor: pointer;
+  border-radius: 1px;
+  font-size: 1.4rem;
+  padding: 0.8rem 2rem;
+  color: white;
+  background: linear-gradient(to right,
+      #7953cd 20%,
+      #104f5a 30%,
+      #0190cd 70%,
+      #764ada 80%);
+  background-size: 500% auto;
+  animation: textShine 2s ease-in-out infinite alternate;
+}
+
+
+.home_container {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../assets/pexels-bri-schneiter-28802-346529.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .home_container {
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 480px) {
+  .home_container {
+    height: 50vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+  }
+}
